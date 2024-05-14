@@ -1,0 +1,280 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism and Travel - Explore Tourism and Travel </title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: 'Roboto', sans-serif;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4d000e;
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        .navbar a, .navbar button {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: #7a354d;
+            border: none;
+            cursor: pointer;
+            min-width: 100px;
+            text-align: center;
+            margin: 0 5px;
+        }
+
+        .navbar a:hover, .navbar button:hover {
+            background-color: #5c0229;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-image {
+            height: 70vh;
+            background: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            border-radius: 8px;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 250px; 
+            height: 200px; 
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            background-color: #4d0008;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button {
+            background-color: #ec2424;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>Tourism and Travel</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#contact">Contact</a>
+            <button onclick="showModal('loginModal')">Login</button>
+            <button onclick="showModal('signupModal')">Sign Up</button>
+            <a href="BOOKNOW.html">Book now</a>
+        </div>
+    </div>
+
+    <div id="home" class="hero-image">
+        <div>Explore Tourism and Travel</div>
+    </div>
+
+    <div id="about" class="section">
+        <h2>About Us</h2>
+        <p> <header>
+            <div class="container">
+                <h1>Tourism and Travel</h1>
+            </div>
+        </header>
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <div class="container">
+                <p>At Tourism and Travel, we are dedicated to unlocking the wonders of the world and igniting the spirit of adventure in every traveler. With a passion for exploration and a commitment to excellence, we curate extraordinary journeys that immerse you in the rich tapestry of cultures, landscapes, and experiences that our planet has to offer.</p>
+                
+                <p>Our journey began with a simple desire to discover the world beyond our doorstep and share its beauty with others. From the majestic peaks of the Himalayas to the sun-kissed beaches of the Caribbean, we've traversed continents and crossed oceans in search of the extraordinary.</p>
+                
+                <p>What sets us apart is our unwavering dedication to authenticity and sustainability. We believe in responsible tourism practices that respect local communities, preserve natural habitats, and foster meaningful connections between travelers and destinations. Every trip we design is a testament to our commitment to leaving a positive impact on the places we visit.</p>
+                
+                <p>Join us as we embark on a journey of discovery, where every destination is a new chapter waiting to be written, and every experience is a treasure waiting to be uncovered. Whether you're seeking adrenaline-fueled adventures, cultural immersions, or moments of serenity in nature, we invite you to explore the world with us and create memories that will last a lifetime.</p>
+                
+                <p>Experience the thrill of exploration, the joy of discovery, and the magic of travel with Tourism and Travel. Your journey starts here.</p>
+            </div>
+        </div>
+        
+            
+        </div>
+         <h2>Join Us</h2>
+                <p>Embark on a journey that promises not just memories, but a profound connection with nature and culture. Let us show you the Himachal we love. Explore, experience, and be enchanted.</p>
+                
+                <h2>Connect with Us</h2>
+                <p>To learn more about our tours or customize your own adventure, contact us today. Let's make your dream trip to  a reality!</p>
+            </div>
+        </section></p>
+    </div>
+
+    <div id="destinations" class="section">
+        <h2>Featured Destinations</h2>
+        <div class="gallery">
+            <img src="1.jpg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="3.jpg" alt="">
+            <img src="4.jpg" alt="">
+            <img src="5.jpg" alt="">
+
+        </div>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © Tourism and travel</p>
+    </div>
+
+    
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="hideModal('loginModal')">&times;</button>
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button onclick="hideModal('loginModal')">Login</button>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="hideModal('signupModal')">&times;</button>
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button onclick="hideModal('signupModal')">Sign Up</button>
+        </div>
+    </div>
+
+    <script>
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function hideModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
